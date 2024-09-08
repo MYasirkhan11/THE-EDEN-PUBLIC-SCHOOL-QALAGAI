@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Eden Public School Qalagai</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+            color: #333;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header Section */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap');
+
+header {
+    background: url('https://img.freepik.com/free-photo/beautiful-female-student-showing-v-sign-smiling-happy-holding-notebooks-with-study-material-attending-courses-standing-blue-background_1258-70146.jpg?t=st=1723843999~exp=1723847599~hmac=3ea4c56698eb1021e6f67c0453a217f15232902f6d5f7d78e0d1e0c2a4c6e3fe&w=740') no-repeat center center/cover;
+    color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adds a dark overlay */
+    z-index: 1;
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+    animation: fadeIn 2s ease-in-out;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-family: 'Montserrat', sans-serif;
+    animation: slideInDown 1.5s ease-out;
+}
+
+header p {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    font-family: 'Roboto', sans-serif;
+    animation: fadeInUp 2s ease-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+        /* About Section */
+        #about {
+            background-color: #fff;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        #about h2 {
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+            color: #4e54c8;
+        }
+
+        #about p {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        /* Principal's Message Section */
+        #principal {
+            background-color: #f4f4f4;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        #principal h2 {
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+            color: #4e54c8;
+        }
+
+        #principal p {
+            font-size: 1.1rem;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        #principal img {
+            border-radius: 50%;
+            margin-top: 20px;
+            width: 150px;
+            height: 150px;
+        }
+
+        /* Features Section */
+        #features {
+            background-color: #fff;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        #features h2 {
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            color: #4e54c8;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .feature-item {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-item img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
+        }
+
+        .feature-item h3 {
+            color: #4e54c8;
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+
+        .feature-item p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* Gallery Section */
+        #gallery {
+            background-color: #f4f4f4;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        #gallery h2 {
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            color: #4e54c8;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Notice Board Section */
+        #notice-board {
+            background-color: #fff;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        #notice-board h2 {
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+            color: #4e54c8;
+        }
+
+        .notice-item {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fafafa;
+        }
+
+        .notice-item h3 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .notice-item p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* Admission Section */
+        #admission {
+            background-color: #fff;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        #admission h2 {
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+            color: #4e54c8;
+        }
+
+        #admission p {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        #admission img {
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+/* For student */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #4e54c8;
+}
+
+h3 {
+text-align: center;
+
+}
+
+.students-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.student-box {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.student-box a {
+    text-decoration: none;
+    color: #333;
+}
+
+.student-box h3 {
+    margin: 0;
+}
+
+.student-box:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+}
+        /* Contact Section */
+        #contact {
+            background-color: #f4f4f4;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        #contact h2 {
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+            color: #4e54c8;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            background-color: #4e54c8;
+            color: #fff;
+            border: none;
+            padding: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+
+        .contact-form button:hover {
+            background-color: #3b4f9d;
+        }
+/* WhatsApp Button */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.whatsapp-button img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.whatsapp-button img:hover {
+    transform: scale(1.1);
+}
+        /* Footer Section */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+<header>
+    <div class="header-content">
+        <h1>The Eden Public School Qalagai</h1>
+        <p>Shaping the future, one student at a time</p>
+    </div>
+</header>
+
+    <!-- About Us Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>The Eden Public School Qalagai offers education from Nursery to 10th grade. We are committed to providing quality education with the best teaching staff in a co-education environment. Our school is equipped with modern facilities including a transport system and a canteen.</p>
+        </div>
+    </section>
+
+    <!-- Principal's Message Section -->
+    <section id="principal">
+        <div class="container">
+            <h2>Message from the Principal</h2>
+            <p>Welcome to The Eden Public School Qalagai. Our mission is to foster an environment of excellence in education, where every student is encouraged to reach their full potential. We take pride in our dedicated teaching staff and comprehensive curriculum.</p>
+            <img src="images/principal.jpg" alt="Principal">
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features">
+        <div class="container">
+            <h2>Our Features</h2>
+            <div class="features-grid">
+         <div class="feature-item">
+                <img src="https://lindastade.com/wp-content/uploads/2017/09/shutterstock_303112742-1.jpg" alt="Best Teachers Staff Icon">
+                <h3>Best Teachers Staff</h3>
+                <p>Our dedicated and highly qualified teaching staff ensures the best education and guidance for our students.</p>
+            </div>       
+
+
+<div class="feature-item">
+                    <img src="https://content.active.com/Assets/Active.com+Content+Site+Digital+Assets/Kids/Galleries/Most+Affordable+Sports/Young+Soccer+Player-Slide+1.jpg" alt="Sports Activity Icon">
+                    <h3>Sports Activity</h3>
+                    <p>Encouraging students to engage in various sports for physical fitness and team building.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="https://spunout.ie/wp-content/uploads/2023/09/student_taking_a_college_exam-945x630.jpg" alt="Monthly Exam Test Icon">
+                    <h3>Monthly Exam Test</h3>
+                    <p>Regular assessments to track and enhance student progress.</p>
+                </div>
+                <div class="feature-item">
+                    
+<img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*GmFmPq-PBcAak07DNA3hLg.jpeg" alt="Co-Education System Icon">
+                    <h3>Co-Education System</h3>
+                    <p>Promoting inclusive education where boys and girls learn together in a balanced environment.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="https://thecompanion.in/wp-content/uploads/2018/07/Muslim-Youth2-1200x661-1.jpg" alt="Islamic Classes Icon">
+                    <h3>Islamic Classes</h3>
+                    <p>Providing comprehensive Islamic education and values as part of the curriculum.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="https://www.fundacionmapfre.org/media/blog/elementos-consejos-transporte-escolar-1194x585-1.jpg" alt="Transport System Icon">
+                    <h3>Transport System</h3>
+                    <p>Safe and convenient transportation facilities for students.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="https://cdnewmums.expatwoman.com/s3fs-public/styles/width_420/public/eating%20at%20school%20main%20(1).png?itok=1ATS7RVt" alt="Canteen Icon">
+                    <h3>Canteen</h3>
+                    <p>Providing nutritious and hygienic food for students.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <div class="container">
+            <h2>Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/school-event1.jpg" alt="School Event 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/school-event2.jpg" alt="School Event 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/school-event3.jpg" alt="School Event 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/school-event4.jpg" alt="School Event 4">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notice Board Section -->
+    <section id="notice-board">
+        <div class="container">
+            <h2>Notice Board</h2>
+            <div class="notice-item">
+                <h3>Summer Vacation</h3>
+                <p>Our summer vacation will start from June 1st to July 15th. Enjoy your break!</p>
+            </div>
+            <div class="notice-item">
+                <h3>Annual Sports Day</h3>
+                <p>The Annual Sports Day will be held on March 10th. All students are encouraged to participate.</p>
+            </div>
+            <div class="notice-item">
+                <h3>Parent-Teacher Meeting</h3>
+                <p>Our next Parent-Teacher Meeting is scheduled for February 20th. We look forward to seeing you there.</p>
+            </div>
+        </div>
+    </section>
+
+<!-- For Students Section -->
+<section id="for-students">
+    <div class="container">
+        <h2>For Parents</h2>
+<h3>Stay updated on your child's progress and activities at school.</h3>
+        <div class="students-grid">
+            <div class="student-box">
+                <a href="http://127.0.0.1:15203/main/0/storage/emulated/0/html/The%20Eden%20Public%20School%20Qalagai/nursery%20class.html" target="_blank">
+                    <h3>Nursery</h3>
+                </a>
+            </div>
+            <div class="student-box">
+                <a href="https://example.com/kindergarten" target="_blank">
+                    <h3>Kindergarten</h3>
+                </a>
+            </div>
+            <div class="student-box">
+                <a href="https://example.com/grade1" target="_blank">
+                    <h3>Grade 1</h3>
+                </a>
+            </div>
+            <div class="student-box">
+                <a href="https://example.com/grade2" target="_blank">
+                    <h3>Grade 2</h3>
+                </a>
+            </div>
+            <div class="student-box">
+                <a href="https://example.com/grade3" target="_blank">
+                    <h3>Grade 3</h3>
+                </a>
+            </div>
+            <div class="student-box">
+                <a href="https://example.com/grade4" target="_blank">
+                    <h3>Grade 4</h3>
+                </a>
+            </div>
+            <div class="student-box">
+                <a href="https://example.com/grade5" target="_blank">
+                    <h3>Grade 5</h3>
+                </a>
+            </div>
+            <div class="student-box">
+                <a href="https://example.com/grade6" target="_blank">
+                    <h3>Grade 6</h3>
+                </a>
+            </div>
+            <div class="student-box">
+                <a href="https://example.com/grade7" target="_blank">
+                    <h3>Grade 7</h3>
+                </a>
+            </div>
+            <div class="student-box">
+                <a href="https://example.com/grade8" target="_blank">
+                    <h3>Grade 8</h3>
+                </a>
+            </div>
+            <div class="student-box">
+                <a href="9th class.html">
+                    <h3>Grade 9</h3>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</section>
+    <!-- Admission Section -->
+    <section id="admission">
+        <div class="container">
+            <h2>Admission Information</h2>
+            <p>Enrollment for the upcoming academic year is now open. We invite parents to visit our school for an admission consultation. For further details, please fill out the contact form below.</p>
+            <img src="https://arroyyanacademy.org/wp-content/uploads/2020/09/admissions.jpg" alt="Admission Banner">
+        </div>
+    </section>
+
+   <!-- Contact Section -->
+<section id="contact">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or would like to get in touch with us, please fill out the contact form below:</p>
+        <div class="contact-form">
+            <form action="https://formspree.io/f/xblrqvaz" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="subject" placeholder="Subject" required>
+                <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- WhatsApp Button -->
+<a href="https://wa.me/1234567890" class="whatsapp-button" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+
+    <!-- Footer Section -->
+<footer class="footer">
+    <p>© 2024 The Eden Public School Qalagai. All rights reserved. Powered by M Yasir Khan.</p>
+</footer>
+
+</body>
+</html>
